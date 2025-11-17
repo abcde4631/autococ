@@ -37,7 +37,11 @@
     "task": [
         {
             "name": "普通任务",
-            "entry": "MyTask1"
+            "entry": "开始"
+        },
+        {
+            "name": "刷水任务",
+            "entry": "开始"
         },
         {
             "name": "选项任务",
