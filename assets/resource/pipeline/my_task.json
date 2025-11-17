@@ -1,11 +1,663 @@
 {
-    "MyTask1": {},
-    "MyTask2": {},
-    "MyTask3": {},
-    "MyTask4": {
-        "recognition": "Custom",
-        "custom_recognition": "my_reco_222",
-        "action": "Custom",
-        "custom_action": "my_action_111"
+    "__mpe_config_新建Pipeline2": {
+        "__mpe_code": {
+            "prefix": "",
+            "filename": "新建Pipeline2",
+            "version": "v0.5.5"
+        }
+    },
+    "开始": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 0,
+                "y": 30
+            }
+        },
+        "next": [
+            "寻找进攻"
+        ]
+    },
+    "寻找进攻": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进攻"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 290,
+                "y": 15
+            }
+        },
+        "next": [
+            "立即寻找"
+        ]
+    },
+    "立即寻找": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "立即寻找"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 1000,
+        "__mpe_code": {
+            "position": {
+                "x": 580,
+                "y": 0
+            }
+        },
+        "next": [
+            "识别机器人"
+        ]
+    },
+    "识别机器人": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "jqr.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 870,
+                "y": 15
+            }
+        },
+        "next": [
+            "放置机器人"
+        ]
+    },
+    "放置机器人": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    100,
+                    180,
+                    180,
+                    120
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 1160,
+                "y": 15
+            }
+        },
+        "next": [
+            "识别女巫"
+        ]
+    },
+    "识别女巫": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "nw1.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 1450,
+                "y": 15
+            }
+        },
+        "next": [
+            "放置女巫"
+        ]
+    },
+    "放置女巫": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    120,
+                    200,
+                    200,
+                    100
+                ]
+            }
+        },
+        "post_delay": 400,
+        "__mpe_code": {
+            "position": {
+                "x": 1740,
+                "y": 0
+            }
+        },
+        "next": [
+            "放置女巫2"
+        ]
+    },
+    "放置女巫2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    120,
+                    200,
+                    200,
+                    300
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 2030,
+                "y": 15
+            }
+        },
+        "next": [
+            "放置女巫3"
+        ]
+    },
+    "放置女巫3": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1100,
+                    500,
+                    200,
+                    350
+                ]
+            }
+        },
+        "post_delay": 1400,
+        "__mpe_code": {
+            "position": {
+                "x": 2320,
+                "y": 0
+            }
+        },
+        "next": [
+            "放置女巫4"
+        ]
+    },
+    "放置女巫4": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1100,
+                    550,
+                    200,
+                    150
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 2611,
+                "y": 16
+            }
+        },
+        "next": [
+            "延迟"
+        ]
+    },
+    "延迟": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "pre_delay": 10000,
+        "__mpe_code": {
+            "position": {
+                "x": 2900,
+                "y": 15
+            }
+        },
+        "next": [
+            "释放机器人技能"
+        ]
+    },
+    "释放机器人技能": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    90,
+                    596,
+                    86,
+                    114
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 3190,
+                "y": 15
+            }
+        },
+        "next": [
+            "放置女巫技能1"
+        ]
+    },
+    "放置女巫技能1": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    201,
+                    586,
+                    91,
+                    124
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 3480,
+                "y": 15
+            }
+        },
+        "next": [
+            "放置女巫技能2"
+        ]
+    },
+    "放置女巫技能2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    304,
+                    591,
+                    88,
+                    117
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 3770,
+                "y": 15
+            }
+        },
+        "next": [
+            "放置女巫技能3"
+        ]
+    },
+    "放置女巫技能3": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "nw3.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    405,
+                    590,
+                    90,
+                    119
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 4060,
+                "y": 0
+            }
+        },
+        "next": [
+            "放置女巫技能4"
+        ]
+    },
+    "放置女巫技能4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "nw4.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    508,
+                    592,
+                    89,
+                    114
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 4350,
+                "y": 0
+            }
+        },
+        "next": [
+            "延迟2"
+        ]
+    },
+    "延迟2": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 100000,
+        "__mpe_code": {
+            "position": {
+                "x": 4640,
+                "y": 15
+            }
+        },
+        "next": [
+            "回营"
+        ]
+    },
+    "回营": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "回营"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 10000,
+        "__mpe_code": {
+            "position": {
+                "x": 4997,
+                "y": 8
+            }
+        },
+        "next": [
+            "开始"
+        ]
+    },
+    "刷水开始": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "__mpe_code": {
+            "position": {
+                "x": -20,
+                "y": 336
+            }
+        },
+        "next": [
+            "寻找进攻_副本2"
+        ]
+    },
+    "寻找进攻_副本2": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "进攻"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 273,
+                "y": 310
+            }
+        },
+        "next": [
+            "立即寻找_副本3"
+        ]
+    },
+    "立即寻找_副本3": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "立即寻找"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 1000,
+        "__mpe_code": {
+            "position": {
+                "x": 554,
+                "y": 296
+            }
+        },
+        "next": [
+            "识别机器人_副本4"
+        ]
+    },
+    "识别机器人_副本4": {
+        "recognition": {
+            "type": "TemplateMatch",
+            "param": {
+                "template": [
+                    "jqr.png"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 844,
+                "y": 331
+            }
+        },
+        "next": [
+            "放置机器人_副本5"
+        ]
+    },
+    "放置机器人_副本5": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    1100,
+                    250,
+                    200,
+                    150
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 1121,
+                "y": 326
+            }
+        },
+        "next": [
+            "延迟2_副本6"
+        ]
+    },
+    "延迟2_副本6": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "DoNothing",
+            "param": {}
+        },
+        "post_delay": 2565,
+        "__mpe_code": {
+            "position": {
+                "x": 1430,
+                "y": 329
+            }
+        },
+        "next": [
+            "直接放弃"
+        ]
+    },
+    "直接放弃": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "放弃"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 1690,
+                "y": 329
+            }
+        },
+        "next": [
+            "确定放弃"
+        ]
+    },
+    "确定放弃": {
+        "recognition": {
+            "type": "DirectHit",
+            "param": {}
+        },
+        "action": {
+            "type": "Click",
+            "param": {
+                "target": [
+                    752,
+                    453,
+                    100,
+                    64
+                ]
+            }
+        },
+        "__mpe_code": {
+            "position": {
+                "x": 1982,
+                "y": 328
+            }
+        },
+        "next": [
+            "回营_副本8"
+        ]
+    },
+    "回营_副本8": {
+        "recognition": {
+            "type": "OCR",
+            "param": {
+                "expected": [
+                    "回营"
+                ]
+            }
+        },
+        "action": {
+            "type": "Click",
+            "param": {}
+        },
+        "post_delay": 6000,
+        "__mpe_code": {
+            "position": {
+                "x": 2282,
+                "y": 326
+            }
+        },
+        "next": [
+            "刷水开始"
+        ]
     }
 }
